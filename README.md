@@ -2,6 +2,20 @@
 
 A modern, responsive portfolio website showcasing my projects and skills. Built with Next.js, TypeScript, and Tailwind CSS for optimal performance.
 
+## Screenshots
+
+### Home Page
+![Home Page](public/Screenshot%202025-11-04%20234218.png)
+
+### About Section
+![About Section](public/Screenshot%202025-11-04%20234309.png)
+
+### Projects Section
+![Projects Section](public/Screenshot%202025-11-04%20234337.png)
+
+### Contact Section
+![Contact Section](public/Screenshot%202025-11-04%20234016.png)
+
 ## Features
 
 - **Responsive Design**: Works seamlessly on desktop, tablet, and mobile devices
@@ -94,6 +108,6 @@ This project is open source and available under the [MIT License](LICENSE).
 
 Feel free to reach out if you have any questions or suggestions!
 
-- LinkedIn: [Your LinkedIn Profile]
-- Email: [Your Email]
+- LinkedIn:https://www.linkedin.com/in/megha-chauhan-569a3b24b/
+- Email:meghachauhan310@gmail.com
 - GitHub: [https://github.com/Megha03-coder](https://github.com/Megha03-coder)

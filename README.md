@@ -4,17 +4,20 @@ A modern, responsive portfolio website showcasing my projects and skills. Built 
 
 ## Screenshots
 
-### Home Page
-![Home Page](public/Screenshot%202025-11-04%20234218.png)
+### HOME SECTION
+![Home section](public/image.png)
 
-### About Section
-![About Section](public/Screenshot%202025-11-04%20234309.png)
+### PROJECT SECTION
+![Project section](public/Screenshot%202025-11-04%20234218.png)
 
-### Projects Section
-![Projects Section](public/Screenshot%202025-11-04%20234337.png)
+### CONTACT Section
+![Contact Section](public/Screenshot%202025-11-04%20234309.png)
 
-### Contact Section
-![Contact Section](public/Screenshot%202025-11-04%20234016.png)
+### FOOTER Section
+![Footer Section](public/Screenshot%202025-11-04%20234337.png)
+
+### ABOUT Section
+![AboutSection](public/Screenshot%202025-11-04%20234016.png)
 
 ## Features
 

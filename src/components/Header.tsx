@@ -71,7 +71,10 @@ const Header = () => {
             </button>
           </div>
 
-          <button className="btn-primary">
+          <button
+            onClick={() => scrollToSection('contact')}
+            className="btn-primary"
+          >
             Get In Touch
           </button>
         </div>

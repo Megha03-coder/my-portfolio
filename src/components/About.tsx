@@ -1,11 +1,32 @@
 'use client'
 
 import React, { useEffect, useState, useRef } from 'react'
-import { Download, Eye } from 'lucide-react'
+import { Download, Eye, ChevronLeft, ChevronRight } from 'lucide-react'
 
 const About = () => {
   const [isVisible, setIsVisible] = useState(false)
+  const [currentExperience, setCurrentExperience] = useState(0)
   const sectionRef = useRef<HTMLElement>(null)
+
+  const experiences = [
+    {
+      title: 'INTERNSHIP - Zidio Development',
+      details: [
+        'Developed an Excel Analytics Platform using MongoDB, Express, React, and Node.js with features like Excel upload, AI insights, and chart generation.',
+        'Built an interactive blogging platform with authentication, real-time comments, and filtering. Implemented JWT authentication, admin dashboard, and data visualization features.'
+      ],
+      hasCertificate: true
+    },
+    {
+      title: 'PROGRAMMER ANALYST - Cepialabs Pvt Ltd',
+      details: [
+        'Currently working as a Programmer Analyst at Cepialabs Pvt Ltd.',
+        'currently working on TRAVIO, a travel website designed to connect people and travelers to plan their trips and explore.',
+        'Technologies: Next.js, Tailwind CSS, Node.js, Python, and other modern web development tools.'
+      ],
+      hasCertificate: false
+    }
+  ]
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -35,6 +56,14 @@ const About = () => {
 
   const handleViewCertificate = () => {
     window.open('/certificate (2).pdf', '_blank')
+  }
+
+  const nextExperience = () => {
+    setCurrentExperience((prev) => (prev + 1) % experiences.length)
+  }
+
+  const prevExperience = () => {
+    setCurrentExperience((prev) => (prev - 1 + experiences.length) % experiences.length)
   }
 
   return (
@@ -85,21 +114,50 @@ const About = () => {
                 <h3 className="text-2xl font-playfair font-bold text-black mb-6">Experience</h3>
                 <div className="space-y-4 text-gray-700 font-cmu text-base leading-relaxed">
                   <div>
-                    <h4 className="font-semibold text-lg">INTERNSHIP - Zidio Development</h4>
+                    <h4 className="font-semibold text-lg">{experiences[currentExperience].title}</h4>
                     <ul className="list-disc list-inside mt-2 space-y-2">
-                      <li>Developed an Excel Analytics Platform using MongoDB, Express, React, and Node.js with features like Excel upload, AI insights, and chart generation.</li>
-                      <li>Built an interactive blogging platform with authentication, real-time comments, and filtering. Implemented JWT authentication, admin dashboard, and data visualization features.</li>
+                      {experiences[currentExperience].details.map((detail, index) => (
+                        <li key={index}>{detail}</li>
+                      ))}
                     </ul>
-                    <div className="mt-4">
-                      <button
-                        onClick={handleViewCertificate}
-                        className="btn-primary flex items-center space-x-2 text-sm px-3 py-1"
-                      >
-                        <Eye size={16} />
-                        <span>View Certificate</span>
-                      </button>
-                    </div>
+                    {experiences[currentExperience].hasCertificate && (
+                      <div className="mt-4">
+                        <button
+                          onClick={handleViewCertificate}
+                          className="btn-primary flex items-center space-x-2 text-sm px-3 py-1"
+                        >
+                          <Eye size={16} />
+                          <span>View Certificate</span>
+                        </button>
+                      </div>
+                    )}
                   </div>
+                </div>
+                <div className="flex justify-between items-center mt-6">
+                  <button
+                    onClick={prevExperience}
+                    className="p-2 bg-gray-200 hover:bg-gray-300 rounded-full transition-colors"
+                    aria-label="Previous experience"
+                  >
+                    <ChevronLeft size={20} />
+                  </button>
+                  <div className="flex space-x-2">
+                    {experiences.map((_, index) => (
+                      <div
+                        key={index}
+                        className={`w-2 h-2 rounded-full ${
+                          index === currentExperience ? 'bg-black' : 'bg-gray-300'
+                        }`}
+                      />
+                    ))}
+                  </div>
+                  <button
+                    onClick={nextExperience}
+                    className="p-2 bg-gray-200 hover:bg-gray-300 rounded-full transition-colors"
+                    aria-label="Next experience"
+                  >
+                    <ChevronRight size={20} />
+                  </button>
                 </div>
               </div>
               <div className="absolute -top-2 -right-2 w-8 h-8 bg-[#E5E5E5] rounded-full animate-pulse"></div>

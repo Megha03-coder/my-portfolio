@@ -52,26 +52,28 @@ const ProjectsPage = () => {
               </div>
 
               {/* Content Section */}
-              <div className="p-6">
-                <h3 className="text-2xl font-playfair font-bold text-black mb-3">
-                  {project.title}
-                </h3>
-                <p className="text-gray-700 font-cmu mb-4 leading-relaxed">
-                  {project.description}
-                </p>
+              <div className="p-6 flex flex-col min-h-[250px]">
+                <div>
+                  <h3 className="text-2xl font-playfair font-bold text-black mb-3">
+                    {project.title}
+                  </h3>
+                  <p className="text-gray-700 font-cmu mb-4 leading-relaxed">
+                    {project.description}
+                  </p>
 
-                <div className="flex flex-wrap gap-2 mb-6">
-                  {project.technologies.map((tech) => (
-                    <span
-                      key={tech}
-                      className="bg-[#F5F5F5] text-black px-3 py-1 rounded-full text-sm font-cmu hover:bg-gray-800 hover:text-white transition-all duration-300"
-                    >
-                      {tech}
-                    </span>
-                  ))}
+                  <div className="flex flex-wrap gap-2 mb-6">
+                    {project.technologies.map((tech) => (
+                      <span
+                        key={tech}
+                        className="bg-[#F5F5F5] text-black px-3 py-1 rounded-full text-sm font-cmu hover:bg-gray-800 hover:text-white transition-all duration-300"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
                 </div>
 
-                <div className="flex space-x-3">
+                <div className="flex space-x-3 mt-auto">
                   <a
                     href={project.github}
                     target="_blank"

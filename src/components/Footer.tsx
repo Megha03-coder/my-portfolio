@@ -88,15 +88,15 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-center space-x-2 text-gray-700 font-cmu">
                 <MapPin size={16} />
-                <span>Address</span>
+                <span>Baghpat , Uttar Pradesh</span>
               </li>
               <li className="flex items-center space-x-2 text-gray-700 font-cmu">
                 <Mail size={16} />
-                <span>E-mail</span>
+                <span>meghachauhan310@gmail.com</span>
               </li>
               <li className="flex items-center space-x-2 text-gray-700 font-cmu">
                 <Phone size={16} />
-                <span>Phone No</span>
+                <span>9012028217</span>
               </li>
             </ul>
           </div>
@@ -122,22 +122,7 @@ const Footer = () => {
               >
                 <Linkedin size={18} />
               </a>
-              <a 
-                href="https://facebook.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center text-white hover:bg-black hover:scale-110 transition-all duration-300 transform"
-              >
-                <Facebook size={18} />
-              </a>
-              <a 
-                href="https://instagram.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center text-white hover:bg-black hover:scale-110 transition-all duration-300 transform"
-              >
-                <Instagram size={18} />
-              </a>
+
             </div>
             
             {/* Copyright - Bottom Right */}

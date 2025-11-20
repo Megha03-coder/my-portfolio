@@ -239,15 +239,7 @@ const Contact = () => {
                     <Linkedin size={18} />
                     <span>LinkedIn</span>
                   </a>
-                  <a 
-                    href="https://twitter.com" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="flex items-center space-x-2 text-gray-700 hover:text-black transition-colors duration-300 hover:scale-110 transform"
-                  >
-                    <Twitter size={18} />
-                    <span>Twitter</span>
-                  </a>
+                  
                 </div>
               </div>
             </div>

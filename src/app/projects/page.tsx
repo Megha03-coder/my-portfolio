@@ -83,17 +83,7 @@ const ProjectsPage = () => {
                     <Github size={16} />
                     <span>GitHub</span>
                   </a>
-                  {project.live && (
-                    <a
-                      href={project.live}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center space-x-2 bg-gray-700 text-white px-4 py-2 rounded-xl font-cmu text-center transition-all duration-300 hover:bg-black hover:text-white hover:scale-105 transform"
-                    >
-                      <ExternalLink size={16} />
-                      <span>Live Demo</span>
-                    </a>
-                  )}
+                  
                 </div>
               </div>
             </div>
